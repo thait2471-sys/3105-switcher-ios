@@ -169,7 +169,7 @@ struct ContentView: View {
         switch result {
         case .success(let urls):
             if let url = urls.first {
-                patchStore.importPackage(from: url)
+                patchStore.importPackage(at: url)
                 statusMessage = "Đã nhập thành công gói patch!"
             }
         case .failure(let error):
